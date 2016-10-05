@@ -5,3 +5,5 @@ class Boot < ApplicationRecord
 	has_many :feedbacks
 	
 end
+
+# for merge testing purposes
