@@ -1,7 +1,7 @@
 <% if current_user %>
   
 	<%= link_to 'Logout', session_path(session[:id]), method: :delete %>
-	<a href="/boots/<%=	current_user.id %>">Profile Page</a>
+	<%= link_to 'Profile Page', boot_path(current_user.id) %>
 
 <% else %>
   
