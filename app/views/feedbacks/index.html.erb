@@ -1,2 +1,12 @@
-<h1>Feedbacks#index</h1>
-<p>Find me in app/views/feedbacks/index.html.erb</p>
+<p>Feedback</p>
+<ul>
+    <% @feedbacks.each do |feedback| %>
+        <li>
+            <p>Rating :</p>
+            <%= feedback.rating %> 
+            <p>Comment: </p>
+            <%= feedback.comment %>
+            <p><%= link_to "Show", feedback_path(feedback) %></p>
+        </li>
+    <% end %>
+</ul>
