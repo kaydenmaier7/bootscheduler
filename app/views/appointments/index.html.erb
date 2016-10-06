@@ -1,9 +1,12 @@
 <h1>Appointments Index</h1>
 
-<% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-    </tr>
+<% @appointments.each do |appointment| %>
+    <ul>
+      <li><%= appointment.topic.name %></li><br>
+      <%= appointment.time.strftime("%H:%M") %><br>
+      <%= appointment.date %><br>
+      <%= appointment.location %><br>
+      <%= appointment.mentor.first_name %><br>
+      <%= link_to 'Show', appointment_path(appointment) %><br>
+    </ul>
   <% end %>
