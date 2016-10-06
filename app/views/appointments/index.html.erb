@@ -1,5 +1,21 @@
 <h1>Appointments Index</h1>
 
+<%= week_calendar events: @appointments do |date, appointments| %>
+  <%= date %>
+
+  <% @appointments.each do |appointment| %>
+    <div>
+<% if appointment.date == date %>
+      <%= appointment.topic.name %>
+      <%= appointment.time.strftime("%H:%M") %>
+<% end %>
+    </div>
+  <% end %>
+
+<% end %>
+
+
+<hr>
 <% @appointments.each do |appointment| %>
     <ul>
       <li><%= appointment.topic.name %></li><br>

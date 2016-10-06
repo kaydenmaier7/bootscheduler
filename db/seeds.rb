@@ -50,10 +50,19 @@ Topic.create(topic3)
 Topic.create(topic4)
 Topic.create(topic5)
 
-100.times do
+
+times = ['8:00', '8:30', '9:00', '9:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '1:00', '1:30', '2:00', '2:30', '3:00', '3:30', '4:00', '4:30', '5:00']
+
+
+
+dates = ['2016-10-03', '2016-10-04', '2016-10-05', '2016-10-06', '2016-10-07', '2016-10-08', '2016-10-09']
+
+
+
+10.times do
 	Appointment.create(
-		time: '07:00:00',
-		date: '2016-11-01',
+		time: Faker::Time.between(DateTime.now, DateTime.now + 6),
+		date: dates.sample,
 		location: Faker::Address.street_address,
 		mentor_id: rand(1..15),
 		topic_id: rand(1..5),
