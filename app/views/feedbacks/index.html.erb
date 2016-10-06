@@ -1,8 +1,12 @@
 <p>Feedback</p>
-<% @feedbacks.each do |feedback| %>
-    <p>Rating :</p>
-    <%= feedback.rating %> 
-    <p>Comment: </p>
-    <%= feedback.comment %>
-    <p><%= link_to "Show", feedback_path(feedback) %></p>
-<% end %>
+<ul>
+    <% @feedbacks.each do |feedback| %>
+        <li>
+            <p>Rating :</p>
+            <%= feedback.rating %> 
+            <p>Comment: </p>
+            <%= feedback.comment %>
+            <p><%= link_to "Show", feedback_path(feedback) %></p>
+        </li>
+    <% end %>
+</ul>
