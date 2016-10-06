@@ -1,2 +1,30 @@
-<h1>Feedbacks#new</h1>
-<p>Find me in app/views/feedbacks/new.html.erb</p>
+<p>On a scale of 1 to 5 rate your pairing session</p>
+
+<%= form_for @feedback do |f| %>
+    <%= f.radio_button :rating, 1 %>
+    <%= f.label :rating, 1 %>
+    <br>
+    <%= f.radio_button :rating, 2 %>
+    <%= f.label :rating, 2 %>
+    <br>
+    <%= f.radio_button :rating, 3 %>
+    <%= f.label :rating, 3 %>
+    <br>
+    <%= f.radio_button :rating, 4 %>
+    <%= f.label :rating, 4 %>
+    <br>
+    <%= f.radio_button :rating, 5 %>
+    <%= f.label :rating, 5 %>
+    <br>
+    <br>
+    <%= f.label :comment %>:
+    <%= f.text_field :comment %>
+    <br>
+    <br>
+    <p>Was the feedback Actionable, Specific, and Kind?</p>
+    <%= f.radio_button :ask?, true %>
+    <%= f.label :rating, "Yes"%>
+    <%= f.radio_button :ask?, false %>
+    <%= f.label :rating, "No"%>
+<% end %>
+
