@@ -4,18 +4,18 @@ class FeedbacksController < ApplicationController
     @feedbacks = Feedback.all
   end
 
-  def show
-    @feedback = Feedback.find(params[:id])
+  def create
+    @feedback = Feedback.new(strong_params)
   end
   
   def new
     @feedback = Feedback.new
   end
 
-  def create
-    @feedback = Feedback.new(strong_params)
+  def show
+    @feedback = Feedback.find(params[:id])
   end
-
+  
   def edit
     @feedback = Feedback.find(params[:id])
   end
