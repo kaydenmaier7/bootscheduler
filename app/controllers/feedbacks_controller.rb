@@ -4,12 +4,14 @@ class FeedbacksController < ApplicationController
     @feedbacks = Feedback.all
   end
 
-  def create
-    @feedback = Feedback.new(strong_params)
-  end
-  
   def new
     @feedback = Feedback.new
+  end
+
+  def create
+    @boot = Boot.find(params[:boot_id])
+    @feedback = @boot.feedbacks.create(feedback_params)
+    redirect_to boot_path(@boot)
   end
 
   def show
@@ -37,7 +39,7 @@ class FeedbacksController < ApplicationController
 
   private
 
-  def strong_params
+  def feedback_params
     params.require(:feedback).permit(:rating, :comment, :ask?)
   end
 end
