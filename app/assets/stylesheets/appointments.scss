@@ -7,7 +7,8 @@
     padding: 10px;
     border: 1px solid black;
     height: 150px;
-
+    width: 200px;
+    text-align: center
   }
 
   .wday-0 {}
@@ -32,4 +33,13 @@
 
   // background-color: blue;
 
+  .appointment {
+    padding: 5px;
+  }
+
+  .date_div {
+    position: relative;
+    padding: 2px;
+    top: 0px;
+  }
 }

@@ -1,15 +1,18 @@
 <h1>Appointments Index</h1>
 
 <%= week_calendar events: @appointments do |date, appointments| %>
-  <%= date %>
+<div class='date_div'>
+  <h4><%= date %></h4>
+</div>
 
   <% @appointments.each do |appointment| %>
-    <div>
-<% if appointment.date == date %>
-      <%= appointment.topic.name %>
-      <%= appointment.time.strftime("%H:%M") %>
-<% end %>
+<% if appointment.date == date && appointment.student_id == nil%>
+  <div class='appointment'>
+      <%= appointment.topic.name %> at <br>
+      <%= appointment.time.strftime("%H:%M") %>,
+      with <%= appointment.mentor.first_name %>
     </div>
+<% end %>
   <% end %>
 
 <% end %>

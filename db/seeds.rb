@@ -70,6 +70,17 @@ dates = ['2016-10-03', '2016-10-04', '2016-10-05', '2016-10-06', '2016-10-07', '
 		)
 end
 
+10.times do
+    Appointment.create(
+        time: Faker::Time.between(DateTime.now, DateTime.now + 6),
+        date: dates.sample,
+        location: Faker::Address.street_address,
+        mentor_id: rand(1..15),
+        topic_id: rand(1..5),
+        student_id: nil
+        )
+end
+
 
 100.times do
   Feedback.create(
