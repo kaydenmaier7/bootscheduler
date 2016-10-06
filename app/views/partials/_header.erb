@@ -1,9 +1,6 @@
 <% if current_user %>
   
-  <form action="/sessions/<%= current_user.id %>" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Logout">
-  </form>
+	<%= link_to 'Logout', session_path(session[:id]), method: :delete %>
 	<a href="/boots/<%=	current_user.id %>">Profile Page</a>
 
 <% else %>
