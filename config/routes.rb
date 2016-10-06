@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  resources :boots do
-  	resources :feedbacks
-  	resources :appointments
-  end
-
+  resources :boots 
+  resources :feedbacks
+  resources :appointments
   resources :sessions, only: [:new, :create, :destroy]
+  
   root 'welcomes#index'
 end
