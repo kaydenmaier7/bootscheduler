@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
   	@boot = Boot.find_by(email: session_params[:email])
   	if @boot && @boot.authenticate(session_params[:password])
-  		session[:boot_id] = @boot.id
+  		session[:id] = @boot.id
   		redirect_to boot_path(@boot)
   	else
       @errors = ["Invalid login"]
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  	session[:boot_id] = nil
+  	session[:id] = nil
   	render 'welcomes#index'
   end
   
