@@ -1,2 +1,43 @@
-<h1>Boots#show</h1>
-<p>Find me in app/views/boots/show.html.erb</p>
+<h1>Hello, <%= @boot.first_name %></h1>
+
+<h3>Upcoming appointments:</h3>
+
+<% if @boot.role == 'student' %>
+
+
+
+<% @boot.student_appointments.each do |a| %>
+<hr>
+
+<div class='appointment_details'>
+  <p>Time: <%= a.time %></p>
+  <p>Date: <%= a.date %></p>
+  <p>Location: <%= a.location %></p>
+  <p>Topic: <%= a.topic.name %></p>
+  <p>With: <%= a.mentor.first_name %></p>
+</div>
+
+<% end %>
+
+
+
+
+<% else %>
+
+
+<% @boot.mentor_appointments.each do |a| %>
+<hr>
+
+<div class='appointment_details'>
+  <p>Time: <%= a.time %></p>
+  <p>Date: <%= a.date %></p>
+  <p>Location: <%= a.location %></p>
+  <p>Topic: <%= a.topic.name %></p>
+  <p>With: <%= a.student.first_name %></p>
+</div>
+
+<% end %>
+
+
+
+<% end %>

@@ -1,2 +1,48 @@
-<h1>Appointments#edit</h1>
-<p>Find me in app/views/appointments/edit.html.erb</p>
+<h1>Edit an Appointment</h1>
+ 
+<%= form_for :appointment, url: appointment_path(@appointment), method: :patch do |f| %>
+ 
+  <!-- no valiations yet -->
+
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@appointment.errors.count, "error") %> prohibited
+        this appointment from being saved:
+      </h2>
+      <ul>
+        <% @appointment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 
+   <p>
+    <%= f.label :time %><br>
+    <%= f.time_field :time %>
+  </p>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <!-- <p>
+    <%= f.label :mentor %><br>
+    <%= f.text_field :mentor %>
+  </p> -->
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', appointments_path %>

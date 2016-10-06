@@ -1,12 +1,21 @@
 class FeedbacksController < ApplicationController
-  def new
-    @feedback = Feedback.new
+
+  def index
+    @feedbacks = Feedback.all
   end
 
   def create
     @feedback = Feedback.new(strong_params)
   end
+  
+  def new
+    @feedback = Feedback.new
+  end
 
+  def show
+    @feedback = Feedback.find(params[:id])
+  end
+  
   def edit
     @feedback = Feedback.find(params[:id])
   end
@@ -23,15 +32,7 @@ class FeedbacksController < ApplicationController
   def destroy
     @feedback = Feedback.find(params[:id])
     @feedback.destroy
-    redirect_to feedback_path
-  end
-
-  def index
-    @feedbacks = Feedback.all
-  end
-
-  def show
-    @feedback = Feedback.find(params[:id])
+    redirect_to feedbacks_path
   end
 
   private
