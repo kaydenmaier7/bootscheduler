@@ -3,7 +3,7 @@
   <strong>Time:</strong>
   <%= @appointment.time.strftime("%H:%M") %>
 </p>
- 
+
 <p>
   <strong>Date:</strong>
   <%= @appointment.date %>
@@ -13,7 +13,7 @@
   <strong>Location:</strong>
   <%= @appointment.location %>
 </p>
- 
+
 <p>
   <strong>Mentor:</strong>
   <%= @appointment.mentor.first_name %>
@@ -25,4 +25,5 @@
 </p>
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %>
+<%= link_to 'Cancel', appointment_path(@appointment), :method => :delete %>
 <%= link_to 'Back', appointment_path %>
