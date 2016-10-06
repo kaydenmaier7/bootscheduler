@@ -1,2 +1,25 @@
-<h1>Appointments#show</h1>
-<p>Find me in app/views/appointments/show.html.erb</p>
+<h1>Your Appointment</h1>
+<p>
+  <strong>Time:</strong>
+  <%= @appointment.time.strftime("%H:%M") %>
+</p>
+ 
+<p>
+  <strong>Date:</strong>
+  <%= @appointment.date %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @appointment.location %>
+</p>
+ 
+<p>
+  <strong>Mentor:</strong>
+  <%= @appointment.mentor.first_name %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @appointment.topic.name %>
+</p>

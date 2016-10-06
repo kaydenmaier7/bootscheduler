@@ -1,3 +1,9 @@
 <h1>Appointments Index</h1>
 
-
+<% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+    </tr>
+  <% end %>
