@@ -3,32 +3,32 @@
 <%= form_for @boot do |f| %>
 
 <p>
-<%= f.label :first_name %>
-<%= f.text_field :first_name %><br>
+<%= f.label :first_name %><br>
+<%= f.text_field :first_name %>
 </p>
 <p>
-<%= f.label :last_name %>
-<%= f.text_field :last_name %><br>
-</p>
-
-<p>
-<%= f.label :email %>
-<%= f.text_field :email %><br>
+<%= f.label :last_name %><br>
+<%= f.text_field :last_name %>
 </p>
 
 <p>
-<%= f.label :password %>
-<%= f.text_field :password %><br>
+<%= f.label :email %><br>
+<%= f.text_field :email %>
 </p>
 
 <p>
-<%= f.label :phone %>
-<%= f.text_field :phone %><br>
+<%= f.label :password %><br>
+<%= f.password_field :password %>
 </p>
 
 <p>
-<%= f.label :student? %>
-<%= f.check_box :role %><br>
+<%= f.label :phone %><br>
+<%= f.text_field :phone %>
+</p>
+
+<p>
+<%= f.label :student? %><br>
+<%= f.check_box :role %>
 </p>
 
 <p>
