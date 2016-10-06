@@ -1,2 +1,27 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Login Here</h1>
+
+<%= form_for :session, url: sessions_path do |f| %>
+
+	<% if @errors %>
+		<ul>
+			<% @errors.each do |error| %>
+				<li>
+					<%= error %>
+				</li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<p>
+		<%= f.text_field :email, placeholder: 'Email:' %>
+	</p>
+
+	<p>
+		<%= f.password_field :password, placeholder: 'Password:' %>
+	</p>
+
+	<p>
+		<%= f.submit value: 'Login' %>
+	</p>
+
+<% end %> 
