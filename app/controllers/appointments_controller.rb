@@ -9,7 +9,7 @@ class AppointmentsController < ApplicationController
       redirect_to appointment_path(@appointment)
     else
       render 'new'
-    end  
+    end
   end
 
   def edit
@@ -18,7 +18,7 @@ class AppointmentsController < ApplicationController
 
   def update
     @appointment = Appointment.find(params[:id])
-    if @appointment.update(strong_params)
+    if @appointment.update(student_id: current_user.id)
       redirect_to appointment_path(@appointment)
     else
       render 'edit'

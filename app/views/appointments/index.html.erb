@@ -8,9 +8,18 @@
   <% @appointments.each do |appointment| %>
 <% if appointment.date == date && appointment.student_id == nil%>
   <div class='appointment'>
+
+  <%= form_for appointment do |f| %>
+
       <%= appointment.topic.name %> at <br>
       <%= appointment.time.strftime("%H:%M") %>,
       with <%= appointment.mentor.first_name %>
+
+    <%= f.submit 'Book Appointment', data: { confirm: 'Are you sure you want to book this appointment?' }  %>
+
+<% end %>
+
+
     </div>
 <% end %>
   <% end %>
