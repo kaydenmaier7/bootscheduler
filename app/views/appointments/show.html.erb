@@ -23,3 +23,6 @@
   <strong>Topic:</strong>
   <%= @appointment.topic.name %>
 </p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %>
+<%= link_to 'Back', appointment_path %>
