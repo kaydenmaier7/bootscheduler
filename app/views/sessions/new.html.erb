@@ -13,15 +13,17 @@
 	<% end %>
 
 	<p>
-		<%= f.text_field :email, placeholder: 'Email:' %>
+		<%= f.label :Email %> <br>
+		<%= f.text_field :email %>
 	</p>
 
 	<p>
-		<%= f.password_field :password, placeholder: 'Password:' %>
+		<%= f.label :Password %> <br>
+		<%= f.password_field :password %>
 	</p>
 
 	<p>
-		<%= f.submit value: 'Login' %>
+		<%= f.submit 'Login' %>
 	</p>
 
 <% end %> 

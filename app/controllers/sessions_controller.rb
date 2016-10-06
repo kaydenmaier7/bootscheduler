@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
   	logout
-  	render 'welcomes#index'
+  	redirect_to '/'
   end
   
   private
