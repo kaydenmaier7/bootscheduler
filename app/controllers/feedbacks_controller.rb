@@ -1,4 +1,13 @@
 class FeedbacksController < ApplicationController
+
+  def index
+    @feedbacks = Feedback.all
+  end
+
+  def show
+    @feedback = Feedback.find(params[:id])
+  end
+  
   def new
     @feedback = Feedback.new
   end
@@ -24,14 +33,6 @@ class FeedbacksController < ApplicationController
     @feedback = Feedback.find(params[:id])
     @feedback.destroy
     redirect_to feedback_path
-  end
-
-  def index
-    @feedbacks = Feedback.all
-  end
-
-  def show
-    @feedback = Feedback.find(params[:id])
   end
 
   private
