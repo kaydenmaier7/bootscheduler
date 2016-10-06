@@ -1,0 +1,35 @@
+          Prefix Verb   URI Pattern                               Controller#Action
+     boot_topics POST   /boots/:boot_id/topics(.:format)          topics#create
+  new_boot_topic GET    /boots/:boot_id/topics/new(.:format)      topics#new
+ edit_boot_topic GET    /boots/:boot_id/topics/:id/edit(.:format) topics#edit
+      boot_topic PATCH  /boots/:boot_id/topics/:id(.:format)      topics#update
+                 PUT    /boots/:boot_id/topics/:id(.:format)      topics#update
+                 DELETE /boots/:boot_id/topics/:id(.:format)      topics#destroy
+           boots GET    /boots(.:format)                          boots#index
+                 POST   /boots(.:format)                          boots#create
+        new_boot GET    /boots/new(.:format)                      boots#new
+       edit_boot GET    /boots/:id/edit(.:format)                 boots#edit
+            boot GET    /boots/:id(.:format)                      boots#show
+                 PATCH  /boots/:id(.:format)                      boots#update
+                 PUT    /boots/:id(.:format)                      boots#update
+                 DELETE /boots/:id(.:format)                      boots#destroy
+       feedbacks GET    /feedbacks(.:format)                      feedbacks#index
+                 POST   /feedbacks(.:format)                      feedbacks#create
+    new_feedback GET    /feedbacks/new(.:format)                  feedbacks#new
+   edit_feedback GET    /feedbacks/:id/edit(.:format)             feedbacks#edit
+        feedback GET    /feedbacks/:id(.:format)                  feedbacks#show
+                 PATCH  /feedbacks/:id(.:format)                  feedbacks#update
+                 PUT    /feedbacks/:id(.:format)                  feedbacks#update
+                 DELETE /feedbacks/:id(.:format)                  feedbacks#destroy
+    appointments GET    /appointments(.:format)                   appointments#index
+                 POST   /appointments(.:format)                   appointments#create
+ new_appointment GET    /appointments/new(.:format)               appointments#new
+edit_appointment GET    /appointments/:id/edit(.:format)          appointments#edit
+     appointment GET    /appointments/:id(.:format)               appointments#show
+                 PATCH  /appointments/:id(.:format)               appointments#update
+                 PUT    /appointments/:id(.:format)               appointments#update
+                 DELETE /appointments/:id(.:format)               appointments#destroy
+        sessions POST   /sessions(.:format)                       sessions#create
+     new_session GET    /sessions/new(.:format)                   sessions#new
+         session DELETE /sessions/:id(.:format)                   sessions#destroy
+            root GET    /                                         welcomes#index
