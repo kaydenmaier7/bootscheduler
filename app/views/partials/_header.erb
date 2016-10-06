@@ -4,7 +4,7 @@
 	<%= link_to 'Profile Page', boot_path(current_user.id) %>
 
 <% else %>
-  
-  <a href="/sessions/new">Login</a>
-  <a href="/boots/new">Register</a> 
+
+	<%= link_to 'Login', new_session_path %>  
+	<%= link_to 'Sign Up', new_boot_path %>
 <% end %>
