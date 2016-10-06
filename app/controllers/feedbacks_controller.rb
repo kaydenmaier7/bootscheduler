@@ -32,7 +32,7 @@ class FeedbacksController < ApplicationController
   def destroy
     @feedback = Feedback.find(params[:id])
     @feedback.destroy
-    redirect_to feedback_path
+    redirect_to feedbacks_path
   end
 
   private
