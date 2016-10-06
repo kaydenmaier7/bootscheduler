@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :boots do
-  	resources :topics, except: [:index, :show]
+    resources :topics, except: [:index, :show]
+    resources :feedbacks
   end 
-  resources :feedbacks
   resources :appointments
   resources :sessions, only: [:new, :create, :destroy]
   
