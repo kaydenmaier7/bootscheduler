@@ -1,2 +1,38 @@
-<h1>Boots#new</h1>
-<p>Find me in app/views/boots/new.html.erb</p>
+<h1>Sign Up</h1>
+
+<%= form_for @boot do |f| %>
+
+<p>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %><br>
+</p>
+<p>
+<%= f.label :last_name %>
+<%= f.text_field :last_name %><br>
+</p>
+
+<p>
+<%= f.label :email %>
+<%= f.text_field :email %><br>
+</p>
+
+<p>
+<%= f.label :password %>
+<%= f.text_field :password %><br>
+</p>
+
+<p>
+<%= f.label :phone %>
+<%= f.text_field :phone %><br>
+</p>
+
+<p>
+<%= f.label :student? %>
+<%= f.check_box :role %><br>
+</p>
+
+<p>
+<%= f.submit %>
+</p>
+
+<% end %>
