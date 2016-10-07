@@ -45,3 +45,7 @@
 
 
 <% end %>
+
+<% if current_user.id == @boot.id || @boot.role == "mentor" %>
+  <%= render "partials/student_feedback_list" %>
+<% end %>

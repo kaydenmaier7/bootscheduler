@@ -1,6 +1,6 @@
-<% if current_user %>
+  <h3>Feedback about this boot: </h3>  
   <ul>
-    <% current_user.feedbacks.each do |feedback| %>
+    <% @boot.feedbacks.each do |feedback| %>
       <li>
         <p>Rating: </p>
         <%= feedback.rating %>
@@ -9,4 +9,3 @@
       </li>
     <% end %>
   </ul>
-<% end %>
