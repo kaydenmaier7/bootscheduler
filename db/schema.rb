@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20161005221148) do
     t.integer  "boot_id"
     t.integer  "rating"
     t.text     "comment"
-    t.boolean  "ask?"
+    t.boolean  "ask"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["boot_id"], name: "index_feedbacks_on_boot_id", using: :btree

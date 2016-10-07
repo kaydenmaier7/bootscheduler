@@ -4,7 +4,7 @@ class CreateFeedbacks < ActiveRecord::Migration[5.0]
       t.references :boot, foreign_key: true
       t.integer :rating
       t.text :comment
-      t.boolean :ask?
+      t.boolean :ask
 
       t.timestamps
     end
