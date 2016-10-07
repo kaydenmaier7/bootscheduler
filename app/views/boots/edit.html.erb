@@ -1,11 +1,13 @@
 <div id="boots-edit">
-<h1>Edit User Details</h1>
 
-<%= form_for @boot do |f| %>
+  <h1>Edit User Details</h1>
 
-<div class="error_message">
-<%= render 'partials/error_messages', active_object: @boot %>
-</div>
+  <%= form_for @boot do |f| %>
+
+  <div class="error_message">
+  <%= render 'partials/error_messages', active_object: @boot %>
+  </div>
+
 
 <p>
 <%= f.label :first_name %><br>

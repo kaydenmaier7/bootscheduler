@@ -1,10 +1,13 @@
-<h1>Mentors:</h1>
-
+<div class="form">
+  <h1>Mentors</h1>
+<div class="show-list">
 <ul>
 <% @boots.each do |b| %>
 
   <% if b.role == 'mentor' %>
-    <li><%= link_to b.first_name, boot_path(b) %></li>
+    <%= link_to b.first_name, boot_path(b) %><br>
   <% end %>
 <% end %>
 </ul>
+</div>
+</div>
