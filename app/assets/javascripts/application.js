@@ -12,5 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  calendarHeaderFixer();
+})
+
+var calendarHeaderFixer = function(){
+  var date = $('.date_div p')
+
+  var headers = $('thead th')
+
+  for (var i = 0; i < date.length; i++) {
+    $(headers[i]).append(date[i]);
+  }
+
+
+
+
+}
