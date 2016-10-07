@@ -24,7 +24,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  width: 1357px;
+  width: 100vw;
   z-index: 99;
   background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 0px none rgb(130, 140, 145);
@@ -43,7 +43,7 @@
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 1357px;
+  width: 100vw;
   z-index: -1;
   border: 0px none rgb(130, 140, 145);
 }/*#NAV_1:after*/
@@ -105,7 +105,7 @@ body {
 
 #homePage {
   margin-top: -400px;
-  width: 102%;
+  width: 101vw;
   background-size: cover;
   margin-left: -9px;
   margin-right: -17px;
