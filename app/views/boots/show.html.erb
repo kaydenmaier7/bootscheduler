@@ -33,7 +33,11 @@
   <p>Date: <%= a.date %></p>
   <p>Location: <%= a.location %></p>
   <p>Topic: <%= a.topic.name %></p>
-  <p>With: <%= a.student.first_name %></p>
+  <% if a.student %>
+    <p>With: <%= a.student.first_name %></p>
+  <% else %>
+    <p>Slots still open</p>
+  <% end %>
 </div>
 
 <% end %>
