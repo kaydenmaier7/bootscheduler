@@ -1,0 +1,18 @@
+<ul>
+  <% current_user.feedbacks.each do |feedback| %>
+    <li>
+      <p>Rating: </p>
+      <%= feedback.rating %>
+      <p>Comment: </p>
+      <%= feedback.comment %>
+      <p>Was the feedback Actionable, Specific, and Kind?</p>
+      <%= form_for :feedback, url: boot_feedback_path(feedback), method: :patch do |f| %>
+        <%= f.radio_button :ask?, true %>
+        <%= f.label :rating, "Yes"%>
+        <%= f.radio_button :ask?, false %>
+        <%= f.label :rating, "No"%>
+        <%= f.submit %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
