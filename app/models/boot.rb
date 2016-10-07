@@ -7,10 +7,10 @@ class Boot < ApplicationRecord
 	has_secure_password
 
 	validates :first_name, :last_name, :email, :password_digest, :phone, :role, presence: true
-	validates :email, :phone, uniqueness: true
+	# validates :email, :phone, uniqueness: true
 
-	validates_format_of :email, :with =>  /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i, :on => :create
-	validates_format_of :phone, :with => /\d{10}/x, :on => :create
+	# validates_format_of :email, :with =>  /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i, :on => :create
+	# validates_format_of :phone, :with => /\d{10}/x, :on => :create
 	
 end
 
