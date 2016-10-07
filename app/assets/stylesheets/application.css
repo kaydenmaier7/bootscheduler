@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ #logo {
+
+ }
+ 
+ #scheduler {
+  height: 37% !important;
+  vertical-align: super !important;
+ }
 
 #navbar {
   padding-top: 16px;
