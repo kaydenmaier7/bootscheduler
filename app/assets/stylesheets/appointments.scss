@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .calendar {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .simple-calendar {
+
 
   thead tr th {
     padding: 10px;
@@ -27,10 +28,10 @@
     padding: 10px;
     border: 1px solid black;
     height: 450px;
-    width: 200px;
+    min-width: 200px;
     text-align: center;
     box-shadow: 2px 2px #888888 inset;
-    background-color: WhiteSmoke;
+    background-color: #c0c0c0;
   }
 
   .wday-0 {}
@@ -53,8 +54,6 @@
 
   .has-events {}
 
-  // background-color: blue;
-
   .appointment {
     padding: 5px;
     background-color: white;
@@ -65,6 +64,7 @@
   .appointment:hover {
     box-shadow: 5px 5px 5px #888888;
 
+    font-weight: bold;
 
     input {
       box-shadow: 2px 2px 2px #888888;
@@ -75,15 +75,6 @@
     }
   }
 
-div {
-  h1 {
-    font: awesome;
-  }
-  p {
-    weight: bold;
-    youmother: available;
-  }
-}
 
 
 
