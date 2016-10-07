@@ -1,7 +1,8 @@
 <nav id="navbar">
   <div id="nav-container">
-    <a href="/" id="A_14" style="margin-right:200px"><img src="<%= asset_path('devbootcamp_logo.svg') %>" id="IMG_15" />
+    <a href="/" id="logo"><img src="<%= asset_path('devbootcamp_logo.svg') %>" />
     </a>
+    <a><%= image_tag 'scheduler', :id => 'scheduler' %></a>
     <ul id="UL_16">
       <% if current_user %>
       <li><%= link_to 'Home', root_path %></li>

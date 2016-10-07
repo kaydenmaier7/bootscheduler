@@ -13,12 +13,12 @@
  *= require_tree .
  *= require_self
  */
- #logo {
 
- }
-
- #scheduler {
-  height: 37% !important;
+#logo {
+  width: 10em;
+}
+ img#scheduler {
+  height: 3em;
   vertical-align: super !important;
  }
 
@@ -70,15 +70,7 @@
 .container {
   margin-top:76px;
 }
-#UL_16 {
-  display: inherit;
-  padding-left: 300px;
-  clear: both;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  color: rgb(130, 140, 145);
-}/*#UL_16*/
+
 
 #UL_16 li {
   padding-left: 50px;
@@ -262,6 +254,18 @@ h1 {
   line-height: 0;
 
 }
+
+#UL_16 {
+    display: inherit;
+    clear: both;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(130, 140, 145);
+    position: absolute;
+    right: 20px;
+}
+
 #UL_16 a {
   color: #828C9A;
   cursor: pointer;
