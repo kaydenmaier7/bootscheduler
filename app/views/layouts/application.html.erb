@@ -11,9 +11,7 @@
   	<header>
   		<%= render partial: 'partials/header' %>
   	</header>	
-    <div class="error_message">
-      <%= render 'partials/error_messages', active_object: @boot %>
-    </div>
+    
     <%= yield %>
   </body>
 </html>
