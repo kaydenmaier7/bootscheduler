@@ -29,9 +29,11 @@ class FeedbacksController < ApplicationController
   end
 
   def update
+    @boot = Boot.find(params[:boot_id])
     @feedback = Feedback.find(params[:id])
     if @feedback.update(feedback_params)
-      redirect_to boot_feedback_path(@feedback)
+      # redirect_to boot_feedback_path(@feedback)
+      redirect_to boot_path(@boot)
     else
       render 'edit'
     end
