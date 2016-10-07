@@ -87,7 +87,7 @@ end
     boot_id: rand(1..30),
     rating: rand(1..5),
     comment: Faker::Hacker.say_something_smart,
-    ask?: [true, true, true, false].sample
+    ask: [true, true, true, false].sample
 
     )
 end

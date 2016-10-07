@@ -6,6 +6,19 @@
         <%= feedback.rating %>
         <p>Comment: </p>
         <%= feedback.comment %>
+        <p>Was the feedback Actionable, Specific, and Kind?</p>		
+        <%= form_for :feedback, url: boot_feedback_path(@boot.id, feedback.id), method: :patch do |f| %>  
+          <%= f.label :ask, "Yes"%>		
+          <%= f.radio_button :ask, true %>		
+          <%= f.label :ask, "No"%>	
+          <%= f.radio_button :ask, false %>		
+          <%= f.submit %>	
+        <% end %>
       </li>
     <% end %>
   </ul>
+
+
+
+<br>		
+<br>
