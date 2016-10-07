@@ -36,7 +36,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'faker'
+  gem 'faker', '~> 1.6.6'
   gem 'shoulda-matchers', '~> 3.1'
 end
 
