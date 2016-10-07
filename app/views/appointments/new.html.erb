@@ -2,22 +2,22 @@
 
 <h1>Make a New Appointment</h1>
 <%= form_for @appointment do |f| %>
-  <p class="appt_new">
+  <p class="apt-new">
     <%= f.label :time %><br>
     <%= f.time_field :time %>
   </p>
 
-  <p class="appt_new">
+  <p class="apt-new">
     <%= f.label :date %><br>
     <%= f.date_field :date %>
   </p>
 
-  <p class="appt_new">
+  <p class="apt-new">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </p>
 
-  <p id="btn">
+  <p class="btn">
     <%= f.submit %>
   </p>
 <% end %>

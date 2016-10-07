@@ -25,7 +25,7 @@
   <%= @appointment.topic.name %>
 </p>
 
-<div id="show-list">
+<div class="show-list">
   <%= link_to 'Edit', edit_appointment_path(@appointment) %>
   <%= link_to 'Cancel', appointment_path(@appointment), :method => :delete %>
   <%= link_to 'Home', appointments_path %>
