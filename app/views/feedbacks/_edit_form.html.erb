@@ -2,7 +2,8 @@
 <%= render 'partials/error_messages', active_object: @feedback %>
 </div>
 
-<%= form_for :feedback, url: feedback_path(@feedback), method: :patch do |f| %>
+<%= form_for :feedback, url: boot_feedback_path(@feedback), method: :patch do |f| %>
+
     <%= f.radio_button :rating, 1 %>
     <%= f.label :rating, 1 %>
     <br>
