@@ -16,7 +16,7 @@
  #logo {
 
  }
- 
+
  #scheduler {
   height: 37% !important;
   vertical-align: super !important;
@@ -205,6 +205,7 @@ body {
    font-size: 16px;
    font-weight: 400;
 }
+
 .apt-show p{
    color: #58595B;
    font-size: 16px;
