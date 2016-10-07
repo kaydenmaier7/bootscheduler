@@ -1,4 +1,7 @@
 <%= form_for @feedback do |f| %>
+<div class="error_message">
+<%= render 'partials/error_messages', active_object: @feedback %>
+</div>
     <%= f.radio_button :rating, 1 %>
     <%= f.label :rating, 1 %>
     <br>
