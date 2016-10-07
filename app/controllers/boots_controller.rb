@@ -19,6 +19,7 @@ class BootsController < ApplicationController
   end
 
   def show
+    redirect_back_to_login_if_not_logged_in
     @boot = Boot.find(params[:id])
     @topics = Topic.all
   end
