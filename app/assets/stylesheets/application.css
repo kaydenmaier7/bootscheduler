@@ -14,4 +14,205 @@
  *= require_self
  */
 
+#navbar {
+  padding-top: 16px;
+  bottom: 319.609px;
+  box-sizing: border-box;
+  color: rgb(130, 140, 145);
+  height: 56px;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 100vw;
+  z-index: 99;
+  background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px none rgb(130, 140, 145);
+  transition: background 0.125s linear 0s;
+}/*#NAV_1*/
+
+#navbar:after {
+  bottom: 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 2px;
+  box-sizing: border-box;
+  color: rgb(130, 140, 145);
+  content: "";
+  display: block;
+  height: 56px;
+  left: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 100vw;
+  z-index: -1;
+  border: 0px none rgb(130, 140, 145);
+}/*#NAV_1:after*/
+
+#nav-container {
+  bottom: 0px;
+  box-sizing: border-box;
+  color: rgb(130, 140, 145);
+  display: flex;
+  border: 0px none rgb(130, 140, 145);
+  font: normal normal normal normal 16px / normal "Source Sans Pro", Helvetica, Arial, sans-serif;
+  outline: rgb(130, 140, 145) none 0px;
+  padding: 0px 108.547px;
+}/*#DIV_2*/
+
+.container {
+  margin-top:76px;
+}
+#UL_16 {
+  display: inherit;
+  padding-left: 300px;
+  clear: both;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: rgb(130, 140, 145);
+}/*#UL_16*/
+
+#UL_16 li {
+  padding-left: 50px;
+  display: inline;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+}
+
+.appt_new label {
+  color:#828c91;
+  font-weight: 200;
+}
+
+.apt {
+  text-align: center;
+}
+
+#apt-edit {
+  text-align: center;
+}
+
+#apt-edit input {
+  background-color: #bddde1;
+  color: #19abb5;
+  height: 24px;
+  width: 18%;
+  border: none;
+  border-radius: 2px;
+}
+
+#homePage {
+  margin-top: -400px;
+  width: 101vw;
+  background-size: cover;
+  margin-left: -9px;
+  margin-right: -17px;
+}
+
+.apt-show {
+  text-align: center;
+}
+.apt-show label{
+   color: #19abb5;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+#apt-edit label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.apt-new label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.apt-new-select label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+.apt-show p{
+   color: #58595B;
+   font-size: 16px;
+   font-weight: 300;
+}
+.apt-new input {
+  background-color: #bddde1;
+  color: #19abb5;
+  height: 24px;
+  width: 18%;
+  border: none;
+  border-radius: 2px;
+}
+
+.btn input{
+  height: 24px;
+  width: 18%;
+  background-color: #19abb5 !important;
+  color: white !important;
+  border-radius: 2px;
+  border: none;
+}
+
+.btn input:hover {
+  background-color: #1cc0cb !important;
+  cursor: pointer !important;
+}
+
+h1 {
+  color:#828c91;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.show-list a {
+  color: #828C9A;
+  cursor: pointer;
+  font-size: 10px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  line-height: 0;
+}
+
+.show-list a:hover {
+  border-bottom: 2px solid #19abb5;
+  color: #19abb5;
+  font-size: 10px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  line-height: 0;
+
+}
+#UL_16 a {
+  color: #828C9A;
+  cursor: pointer;
+  font-size: 10px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  line-height: 0;
+}
+
+#UL_16 a:hover {
+  border-bottom: 2px solid #19abb5;
+  color: #19abb5;
+  font-size: 10px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  line-height: 0;
+}
 
