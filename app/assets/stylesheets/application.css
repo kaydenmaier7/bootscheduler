@@ -121,6 +121,13 @@ body {
   text-align: center;
 }
 
+.feedbacks {
+  text-align: center;
+  color: #828c91;
+  font-size: 25px;
+  font-weight: 200;
+}
+
 #apt-edit {
   text-align: center;
 }
