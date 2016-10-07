@@ -5,6 +5,7 @@ class FeedbacksController < ApplicationController
   end
 
   def new
+    @boot = Boot.find(params[:boot_id])
     @feedback = Feedback.new
   end
 
