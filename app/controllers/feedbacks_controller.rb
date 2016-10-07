@@ -5,12 +5,12 @@ class FeedbacksController < ApplicationController
   end
 
   def new
-    @boot = Boot.find(params[:boot_id])
+    @boot = Boot.find(current_user.id)
     @feedback = Feedback.new
   end
 
   def create
-    @boot = Boot.find(params[:boot_id])
+    @boot = Boot.find(current_user.id)
     @feedback = @boot.feedbacks.create(feedback_params)
     redirect_to boot_path(@boot)
   end
@@ -25,8 +25,8 @@ class FeedbacksController < ApplicationController
 
   def update
     @feedback = Feedback.find(params[:id])
-    if @feedback.update(strong_params)
-      redirect_to feedback_path(@feedback)
+    if @feedback.update(feedback_params)
+      redirect_to boot_feedback_path(@feedback)
     else
       render 'edit'
     end
@@ -35,7 +35,7 @@ class FeedbacksController < ApplicationController
   def destroy
     @feedback = Feedback.find(params[:id])
     @feedback.destroy
-    redirect_to feedbacks_path
+    redirect_to boot_path(current_user)
   end
 
   private
