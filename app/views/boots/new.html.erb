@@ -1,41 +1,47 @@
+<div class="boots">
 <h1>Sign Up</h1>
+<div class="error_message">
+<%= render 'partials/error_messages', active_object: @boot %>
+</div>
+
 
 <%= form_for @boot do |f| %>
 
-	<p>
+	<p class="boots-new">
 		<%= f.label :first_name %><br>
 		<%= f.text_field :first_name %>
 	</p>
 	
-	<p>
+	<p class="boots-new">
 		<%= f.label :last_name %><br>
 		<%= f.text_field :last_name %>
 	</p>
 
-	<p>
+	<p class="boots-new">
 		<%= f.label :email %><br>
 		<%= f.text_field :email %>
 	</p>
 	
-	<p>
+	<p class="boots-new">
 		<%= f.label :phone %><br>
 		<%= f.text_field :phone %>
 	</p>
 
-	<p>
+	<p class="boots-new">
 		<%= f.label :password %><br>
 		<%= f.password_field :password %>
 	</p>
 
-	<p>
+	<div class="apt-new-select">
 		<%= f.radio_button :role, 'student' %>
 		<%= f.label :Student %>
 		<%= f.radio_button :role, 'mentor' %>
 		<%= f.label :Mentor %>
-	</p>
+	</div>
 
-	<p>
+	<p class="btn">
 		<%= f.submit 'Create Account' %>
 	</p>
 
 <% end %>
+</div>

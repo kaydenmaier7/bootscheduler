@@ -2,7 +2,7 @@
 
 
 <% if @boot.role == 'student' %>
-<h3>Appointment With a Mentor:</h3>
+<h3>Appointment With A Mentor:</h3>
 
   <% @boot.student_appointments.each do |a| %>
   <hr>
@@ -53,6 +53,7 @@
   </div>
 <% end %>
 
-
-
-
+  <% if current_user.id == @boot.id || @boot.role == "mentor" %>
+    <%= render "partials/student_feedback_list" %>
+  <% end %>
+  <p><%= link_to "Leave Feedback for this boot", new_boot_feedback_path(@boot) %></p>
