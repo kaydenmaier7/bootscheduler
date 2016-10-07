@@ -48,7 +48,7 @@
   border: 0px none rgb(130, 140, 145);
 }/*#NAV_1:after*/
 
-#nav_container {
+#nav-container {
   bottom: 0px;
   box-sizing: border-box;
   color: rgb(130, 140, 145);
@@ -64,6 +64,7 @@
 }
 #UL_16 {
   display: inherit;
+  padding-left: 300px;
   clear: both;
   list-style-type: none;
   margin: 0;
@@ -72,7 +73,7 @@
 }/*#UL_16*/
 
 #UL_16 li {
-  padding-left: 200px;
+  padding-left: 50px;
   display: inline;
 }
 
