@@ -12,8 +12,12 @@ class FeedbacksController < ApplicationController
 
   def create
     @boot = Boot.find(current_user.id)
-    @feedback = @boot.feedbacks.create(feedback_params)
-    redirect_to boot_path(@boot)
+    @feedback = @boot.feedbacks.new(feedback_params)
+    if @feedback.save
+      redirect_to boot_path(@boot)
+    else
+      render 'new'
+    end
   end
 
   def show
