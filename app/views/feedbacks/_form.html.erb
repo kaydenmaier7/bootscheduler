@@ -1,3 +1,5 @@
+<div class="form">
+<div class="apt-new-select">
  <div class="error_message">
 <%= render 'partials/error_messages', active_object: @feedback %>
 </div>
@@ -23,5 +25,9 @@
     <%= f.text_area :comment %>
     <br>
     <br>
-    <%= f.submit %>
+    <p class="btn">
+    <%= f.submit 'Submit Feedback' %>
+    </p>
 <% end %>
+</div>
+</div>

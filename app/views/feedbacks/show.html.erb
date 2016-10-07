@@ -1,11 +1,17 @@
-<p>Rating: </p>
-<%= @feedback.rating %> 
-<br>
-<p>Comment: </p>
-<%= @feedback.comment %> 
-
-<p><%= link_to "Edit", edit_boot_feedback_path(@feedback) %></p>
+<div class="form">
+<div class="apt-new-select">
+  <p class="feedbacks">Rating: </p>
+  <label><%= @feedback.rating %></label> 
+  <br>
+  <p class="feedbacks">Comment: </p>
+  <label><%= @feedback.comment %></label> 
+</div>
+<div class="show-list">
+<p class="btn"><%= link_to "Edit", edit_boot_feedback_path(@feedback) %></p>
 <p><%= link_to "Destroy", boot_feedback_path(@feedback),
                         method: :delete,
                         data: { confirm: "Are you sure?" } %> </p>
 <p><%= link_to "Back", boot_path %></p> 
+</div>
+</div>
+
