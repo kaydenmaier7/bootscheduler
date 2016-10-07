@@ -2,32 +2,40 @@
 
 <%= form_for @boot do |f| %>
 
-<p>
-<%= f.label :first_name %><br>
-<%= f.text_field :first_name %><br>
-</p>
-<p>
-<%= f.label :last_name %><br>
-<%= f.text_field :last_name %>
-</p>
+	<p>
+		<%= f.label :first_name %><br>
+		<%= f.text_field :first_name %>
+	</p>
 
-<p>
-<%= f.label :email %><br>
-<%= f.text_field :email %>
-</p>
+	<p>
+		<%= f.label :last_name %><br>
+		<%= f.text_field :last_name %>
+	</p>
 
-<p>
-<%= f.label :password %><br>
-<%= f.password_field :password %>
-</p>
+	<p>
+		<%= f.label :email %><br>
+		<%= f.text_field :email %>
+	</p>
 
-<p>
-<%= f.label :phone %><br>
-<%= f.text_field :phone %>
-</p>
+	<p>
+		<%= f.label :phone %><br>
+		<%= f.text_field :phone %>
+	</p>
 
-<p>
-<%= f.submit %>
-</p>
+	<p>
+		<%= f.label :password %><br>
+		<%= f.password_field :password %>
+	</p>
+
+	<p>
+		<%= f.radio_button :role, 'student' %>
+		<%= f.label :Student %>
+		<%= f.radio_button :role, 'mentor' %>
+		<%= f.label :Mentor %>
+	</p>
+
+	<p>
+	<%= f.submit 'Update Account' %>
+	</p>
 
 <% end %>
