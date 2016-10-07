@@ -13,4 +13,3 @@ class Boot < ApplicationRecord
 	# validates_format_of :phone, :with => /\d{10}/x, :on => :create
 	
 end
-

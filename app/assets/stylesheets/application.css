@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ #logo {
+
+ }
+
+ #scheduler {
+  height: 37% !important;
+  vertical-align: super !important;
+ }
 
 #navbar {
   padding-top: 16px;
@@ -91,6 +99,46 @@ body {
   text-align: center;
 }
 
+.boots_new label {
+  color:#828c91;
+  font-weight: 200;
+}
+
+.boots-new input {
+  background-color: #bddde1;
+  color: #19abb5;
+  height: 24px;
+  width: 18%;
+  border: none;
+  border-radius: 2px;
+}
+
+.boots-new label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.boots-new-select label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.boots {
+  text-align: center;
+}
+.form {
+  text-align: center;
+}
+
+.feedbacks {
+  text-align: center;
+  color: #828c91;
+  font-size: 25px;
+  font-weight: 200;
+}
+
 #apt-edit {
   text-align: center;
 }
@@ -104,8 +152,27 @@ body {
   border-radius: 2px;
 }
 
+#boots-edit {
+  text-align: center;
+}
+
+#boots-edit input {
+  background-color: #bddde1;
+  color: #19abb5;
+  height: 24px;
+  width: 18%;
+  border: none;
+  border-radius: 2px;
+}
+
+#boots-edit label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
 #homePage {
-  margin-top: -400px;
+  margin-top: -362px;
   width: 101vw;
   background-size: cover;
   margin-left: -9px;
@@ -138,6 +205,7 @@ body {
    font-size: 16px;
    font-weight: 400;
 }
+
 .apt-show p{
    color: #58595B;
    font-size: 16px;

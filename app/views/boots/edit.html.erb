@@ -1,37 +1,49 @@
-<h1>Edit User Details</h1>
+<div id="boots-edit">
 
-<%= form_for @boot do |f| %>
+  <h1>Edit Boot Details</h1>
 
-<div class="error_message">
-<%= render 'partials/error_messages', active_object: @boot %>
+  <%= form_for @boot do |f| %>
+
+  <div class="error_message">
+  <%= render 'partials/error_messages', active_object: @boot %>
+  </div>
+
+	<p>
+		<%= f.label :first_name %><br>
+		<%= f.text_field :first_name %>
+	</p>
+
+	<p>
+		<%= f.label :last_name %><br>
+		<%= f.text_field :last_name %>
+	</p>
+
+	<p>
+		<%= f.label :phone %><br>
+		<%= f.text_field :phone %>
+	</p>
+
+	<p>
+		<%= f.label :email %><br>
+		<%= f.text_field :email %>
+	</p>
+
+	<p>
+		<%= f.label :password %><br>
+		<%= f.password_field :password %>
+	</p>
+
+	<p>
+		<%= f.radio_button :role, 'student' %>
+		<%= f.label :Student %>
+		<%= f.radio_button :role, 'mentor' %>
+		<%= f.label :Mentor %>
+	</p>
+
+	<p class="btn">
+		<%= f.submit %>
+	</p>
+	<% end %>
+
+	<%= link_to 'Back', boot_path(@boot) %>
 </div>
-
-<p>
-<%= f.label :first_name %><br>
-<%= f.text_field :first_name %><br>
-</p>
-<p>
-<%= f.label :last_name %><br>
-<%= f.text_field :last_name %>
-</p>
-
-<p>
-<%= f.label :email %><br>
-<%= f.text_field :email %>
-</p>
-
-<p>
-<%= f.label :password %><br>
-<%= f.password_field :password %>
-</p>
-
-<p>
-<%= f.label :phone %><br>
-<%= f.text_field :phone %>
-</p>
-
-<p>
-<%= f.submit %>
-</p>
-
-<% end %>
