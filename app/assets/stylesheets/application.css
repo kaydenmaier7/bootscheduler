@@ -59,7 +59,9 @@
   padding: 0px 108.547px;
 }/*#DIV_2*/
 
-
+.container {
+  margin-top:76px;
+}
 #UL_16 {
   display: inherit;
   clear: both;
@@ -72,6 +74,42 @@
 #UL_16 li {
   padding-left: 200px;
   display: inline;
+}
+
+body {
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+}
+
+.appt_new label {
+  color:#828c91;
+  font-weight: 200;
+}
+
+#appt-new {
+  text-align: center;
+}
+.appt_new input {
+  background-color: #bddde1;
+  color: #19abb5;
+  height: 24px;
+  width: 18%;
+  border: none;
+  border-radius: 2px;
+}
+
+#btn input{
+  height: 24px;
+  width: 18%;
+  background-color: #19abb5;
+  color: white;
+  border-radius: 2px;
+  border: none;
+}
+
+h1 {
+  color:#828c91;
+  font-size: 29px;
+  font-weight: 200;
 }
 
 #UL_16 a {

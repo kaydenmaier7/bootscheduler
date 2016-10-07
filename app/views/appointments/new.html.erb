@@ -1,23 +1,25 @@
+<div id="appt-new">
+
 <h1>Make a New Appointment</h1>
 <%= form_for @appointment do |f| %>
-  <p>
+  <p class="appt_new">
     <%= f.label :time %><br>
     <%= f.time_field :time %>
   </p>
 
-  <p>
+  <p class="appt_new">
     <%= f.label :date %><br>
     <%= f.date_field :date %>
   </p>
 
-  <p>
+  <p class="appt_new">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </p>
 
-  <p>
+  <p id="btn">
     <%= f.submit %>
   </p>
 <% end %>
-
+</div>
 <!-- not sure how we're going to have student set up appointment if we're going to be using a calendar  -->
