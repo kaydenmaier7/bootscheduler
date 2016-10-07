@@ -1,3 +1,5 @@
+<%= link_to 'Home', root_path %>
+
 <% if current_user %>
   
 	<%= link_to 'Logout', session_path(session[:id]), method: :delete %>
@@ -7,4 +9,6 @@
 
 	<%= link_to 'Login', new_session_path %>  
 	<%= link_to 'Sign Up', new_boot_path %>
+	<%= link_to 'Calendar', appointments_path %>
+
 <% end %>
