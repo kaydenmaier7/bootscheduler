@@ -1,4 +1,9 @@
 class BootsController < ApplicationController
+  
+  def index
+    @boots = Boot.all
+  end
+
   def new
     @boot = Boot.new
   end
@@ -11,6 +16,12 @@ class BootsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    redirect_back_to_login_if_not_logged_in
+    @boot = Boot.find(params[:id])
+    @topics = Topic.all
   end
 
   def edit
@@ -32,14 +43,6 @@ class BootsController < ApplicationController
     redirect_to boot_path
   end
 
-  def index
-    @boots = Boot.all
-  end
-
-  def show
-    @boot = Boot.find(params[:id])
-    @topics = Topic.all
-  end
 private
 
   def strong_params
