@@ -6,13 +6,13 @@
 </div>
 
   <% @appointments.each do |appointment| %>
-<% if appointment.date == date && appointment.student_id == nil%>
+<% if appointment.date == date && appointment.student_id == nil %>
   <div class='appointment'>
 
   <%= form_for appointment do |f| %>
 
       <%= appointment.topic.name %> at <br>
-      <%= appointment.time.strftime("%H:%M") %>,
+      <%= readable_time(appointment.time) %>,
       with <%= appointment.mentor.first_name %>
 
     <%= f.submit 'Book Appointment', data: { confirm: 'Are you sure you want to book this appointment?' }  %>
@@ -26,15 +26,3 @@
 
 <% end %>
 
-
-<hr>
-<% @appointments.each do |appointment| %>
-    <ul>
-      <li><%= appointment.topic.name %></li><br>
-      <%= appointment.time.strftime("%H:%M") %><br>
-      <%= appointment.date %><br>
-      <%= appointment.location %><br>
-      <%= appointment.mentor.first_name %><br>
-      <%= link_to 'Show', appointment_path(appointment) %><br>
-    </ul>
-  <% end %>
