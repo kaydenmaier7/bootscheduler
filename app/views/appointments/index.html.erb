@@ -1,9 +1,12 @@
 <h1>Appointments Index</h1>
 
+<div class='calendar'>
 <%= week_calendar events: @appointments do |date, appointments| %>
+
 <div class='date_div'>
-  <h4><%= date %></h4>
+  <p><%= date %></p>
 </div>
+<hr>
 
   <% @appointments.each do |appointment| %>
 <% if appointment.date == date && appointment.student_id == nil %>
@@ -15,7 +18,11 @@
       <%= readable_time(appointment.time) %>,
       with <%= appointment.mentor.first_name %>
 
+      <% if current_user && current_user.role == 'student' %>
+
     <%= f.submit 'Book Appointment', data: { confirm: 'Are you sure you want to book this appointment?' }  %>
+
+    <% end %>
 
 <% end %>
 
@@ -26,3 +33,4 @@
 
 <% end %>
 
+</div>

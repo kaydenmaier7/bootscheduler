@@ -2,13 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.calendar {
+  overflow: hidden;
+}
+
 .simple-calendar {
+
+  thead tr th {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.1em;
+    border: 1px solid black;
+    border-radius: 2px;
+  }
+
+    thead tr th:hover {
+    color: blue;
+    box-shadow: 2px 2px #888888;
+  }
+
+
+
   .day {
     padding: 10px;
     border: 1px solid black;
-    height: 150px;
+    height: 450px;
     width: 200px;
-    text-align: center
+    text-align: center;
+    box-shadow: 2px 2px #888888 inset;
+    background-color: WhiteSmoke;
   }
 
   .wday-0 {}
@@ -35,11 +57,34 @@
 
   .appointment {
     padding: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 2px #888888;
+    margin: 2px;
   }
 
-  .date_div {
-    position: relative;
-    padding: 2px;
-    top: 0px;
+  .appointment:hover {
+    box-shadow: 5px 5px 5px #888888;
+
+
+    input {
+      box-shadow: 2px 2px 2px #888888;
+    }
+
+    input:hover {
+      color: blue;
+    }
   }
+
+div {
+  h1 {
+    font: awesome;
+  }
+  p {
+    weight: bold;
+    youmother: available;
+  }
+}
+
+
+
 }
