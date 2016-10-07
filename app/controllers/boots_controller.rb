@@ -6,6 +6,7 @@ class BootsController < ApplicationController
   def create
     @boot = Boot.new(strong_params)
     if @boot.save
+      login(@boot)
       redirect_to boot_path(@boot)
     else
       render 'new'

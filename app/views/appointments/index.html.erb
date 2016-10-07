@@ -1,5 +1,33 @@
 <h1>Appointments Index</h1>
 
+<%= week_calendar events: @appointments do |date, appointments| %>
+<div class='date_div'>
+  <h4><%= date %></h4>
+</div>
+
+  <% @appointments.each do |appointment| %>
+<% if appointment.date == date && appointment.student_id == nil%>
+  <div class='appointment'>
+
+  <%= form_for appointment do |f| %>
+
+      <%= appointment.topic.name %> at <br>
+      <%= appointment.time.strftime("%H:%M") %>,
+      with <%= appointment.mentor.first_name %>
+
+    <%= f.submit 'Book Appointment', data: { confirm: 'Are you sure you want to book this appointment?' }  %>
+
+<% end %>
+
+
+    </div>
+<% end %>
+  <% end %>
+
+<% end %>
+
+
+<hr>
 <% @appointments.each do |appointment| %>
     <ul>
       <li><%= appointment.topic.name %></li><br>
