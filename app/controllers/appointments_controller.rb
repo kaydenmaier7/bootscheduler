@@ -4,10 +4,13 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointment = Appointment.new(strong_params)
+    all_params = strong_params.to_h.merge({mentor_id: current_user.id, topic_id: Topic.first.id})
+    @appointment = Appointment.new(all_params)
     if @appointment.save
       redirect_to appointment_path(@appointment)
     else
+      puts 'did not save'
+      p @appointment.errors.full_messages
       render 'new'
     end
   end
