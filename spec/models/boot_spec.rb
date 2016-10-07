@@ -11,5 +11,8 @@ RSpec.describe Boot, type: :model do
   end
 
   describe "associations" do
+    it { is_expected.to have_many(:mentor_appointments).with_foreign_key('mentor_id').class_name('Appointment') }
+    it { is_expected.to have_many(:student_appointments).with_foreign_key('student_id').class_name('Appointment') }
+    it { is_expected.to have_many(:feedbacks) }
   end
 end
