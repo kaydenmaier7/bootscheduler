@@ -24,7 +24,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
-  width: 1357px;
+  width: 100vw;
   z-index: 99;
   background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 0px none rgb(130, 140, 145);
@@ -43,12 +43,12 @@
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 1357px;
+  width: 100vw;
   z-index: -1;
   border: 0px none rgb(130, 140, 145);
 }/*#NAV_1:after*/
 
-#nav_container {
+#nav-container {
   bottom: 0px;
   box-sizing: border-box;
   color: rgb(130, 140, 145);
@@ -64,6 +64,7 @@
 }
 #UL_16 {
   display: inherit;
+  padding-left: 300px;
   clear: both;
   list-style-type: none;
   margin: 0;
@@ -72,7 +73,7 @@
 }/*#UL_16*/
 
 #UL_16 li {
-  padding-left: 200px;
+  padding-left: 50px;
   display: inline;
 }
 
@@ -105,7 +106,7 @@ body {
 
 #homePage {
   margin-top: -400px;
-  width: 102%;
+  width: 101vw;
   background-size: cover;
   margin-left: -9px;
   margin-right: -17px;
@@ -121,6 +122,18 @@ body {
 }
 
 #apt-edit label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.apt-new label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.apt-new-select label{
    color: #7A8586;
    font-size: 16px;
    font-weight: 400;

@@ -27,10 +27,11 @@
 		<%= f.password_field :password %>
 	</p>
 
-
 	<p>
-		<%= f.label :student? %><br>
-		<%= f.check_box :role %>
+		<%= f.radio_button :role, 'student' %>
+		<%= f.label :Student %>
+		<%= f.radio_button :role, 'mentor' %>
+		<%= f.label :Mentor %>
 	</p>
 
 	<p>

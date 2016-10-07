@@ -1,16 +1,18 @@
 <nav id="navbar">
-  <div id="nav_container">
-    <a href="/" id="A_14"><img src="<%= asset_path('devbootcamp_logo.svg') %>" id="IMG_15" /></a>
+  <div id="nav-container">
+    <a href="/" id="A_14" style="margin-right:200px"><img src="<%= asset_path('devbootcamp_logo.svg') %>" id="IMG_15" /></a>
     <ul id="UL_16">
       <% if current_user %>
 
       <li><%= link_to 'Logout', session_path(session[:id]), method: :delete %></li>
       <li><%= link_to 'Profile Page', boot_path(current_user.id) %></li>
-
+      <li><%= link_to 'Calendar', appointments_path %></li>
+      <li><%= link_to 'Home', root_path %></li>
       <% else %>
-
       <li><%= link_to 'Login', new_session_path %></li>
       <li><%= link_to 'Sign Up', new_boot_path %></li>
+      <li><%= link_to 'Calendar', appointments_path %></li>
+      <li><%= link_to 'Home', root_path %></li>
       <% end %>
     </ul>
   </div>
