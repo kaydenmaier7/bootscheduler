@@ -1,3 +1,4 @@
+<div id="apt-edit">
 <h1>Edit an Appointment</h1>
  
 <%= form_for :appointment, url: appointment_path(@appointment), method: :patch do |f| %>
@@ -39,10 +40,12 @@
     <%= f.text_field :mentor %>
   </p> -->
  
-  <p>
+  <p class="btn">
     <%= f.submit %>
   </p>
  
 <% end %>
- 
+<div class="show-list">
 <%= link_to 'Back', appointments_path %>
+</div>
+</div>
