@@ -6,12 +6,12 @@ class FeedbacksController < ApplicationController
   end
 
   def new
-    @boot = Boot.find(current_user.id)
+    @boot = Boot.find(  params[:boot_id])
     @feedback = Feedback.new
   end
 
   def create
-    @boot = Boot.find(current_user.id)
+    @boot = Boot.find(params[:boot_id])
     @feedback = @boot.feedbacks.new(feedback_params)
     if @feedback.save
       redirect_to boot_path(@boot)
