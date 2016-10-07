@@ -6,11 +6,7 @@ class FeedbacksController < ApplicationController
   end
 
   def new
-<<<<<<< HEAD
     @boot = Boot.find(params[:boot_id])
-=======
-    @boot = Boot.find(  params[:boot_id])
->>>>>>> 818d68457e452bc0adaf930a3d0abe6bd7772c2a
     @feedback = Feedback.new
   end
 
