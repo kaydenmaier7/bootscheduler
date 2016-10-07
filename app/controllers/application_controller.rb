@@ -21,4 +21,13 @@ class ApplicationController < ActionController::Base
   def errors(item)
     @errors = item.errors.full_messages
   end
+
+  private
+  def redirect_back_to_login_if_not_logged_in
+    
+    unless logged_in?
+      redirect_to new_session_path
+    end
+    
+  end
 end

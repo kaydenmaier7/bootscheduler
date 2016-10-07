@@ -1,54 +1,59 @@
 <h1>Hello, <%= @boot.first_name %></h1>
 
-<h3>Upcoming appointments:</h3>
 
 <% if @boot.role == 'student' %>
+<h3>Appointment With A Mentor:</h3>
 
+  <% @boot.student_appointments.each do |a| %>
+  <hr>
 
+  <div class='appointment_details'>
+    <p>Time: <%= readable_time(a.time) %></p>
+    <p>Date: <%= a.date %></p>
+    <p>Location: <%= a.location %></p>
+    <p>Topic: <%= a.topic.name %></p>
+    <p>With: <%= a.mentor.first_name %></p>
+  </div>
 
-<% @boot.student_appointments.each do |a| %>
-<hr>
-
-<div class='appointment_details'>
-  <p>Time: <%= a.time %></p>
-  <p>Date: <%= a.date %></p>
-  <p>Location: <%= a.location %></p>
-  <p>Topic: <%= a.topic.name %></p>
-  <p>With: <%= a.mentor.first_name %></p>
-</div>
-
-<% end %>
-
-
-
+  <% end %>
 
 <% else %>
+<h3>Teaching at these times:</h3>
+  <% @boot.mentor_appointments.each do |a| %>
+  <hr>
 
+  <div class='appointment_details'>
+    <p>Time: <%= readable_time(a.time) %></p>
+    <p>Date: <%= a.date %></p>
+    <p>Location: <%= a.location %></p>
+    <% if !a.mentor.topics.include?(a.topic)  %>
+      <% a.mentor.topics << Topic.find(a.topic_id) %> 
+    <% end %>
+    <p>Topic: <%= a.topic.name %></p>
+               
+    <% if a.student %>
+      <p>With: <%= a.student.first_name %></p>
+      <%= link_to 'Cancel Appointment'   %>
+    <% else %>
+      <p>Appointment Is Still Available</p>
+    <% end %>
+  </div>
 
-<% @boot.mentor_appointments.each do |a| %>
-<hr>
-
-<div class='appointment_details'>
-  <p>Time: <%= a.time %></p>
-  <p>Date: <%= a.date %></p>
-  <p>Location: <%= a.location %></p>
-  <p>Topic: <%= a.topic.name %></p>
-  <% if a.student %>
-    <p>With: <%= a.student.first_name %></p>
-  <% else %>
-    <p>Slots still open</p>
   <% end %>
-</div>
 
+  <div>
+    <h3>Currently Teaching:</h3>
+    <ul>
+      <% @boot.topics.each do |topic| %>
+        <li>
+          <%= topic.name %>
+        </li>
+      <% end %>
+    </ul>  
+  </div>
 <% end %>
 
-
-
-<% end %>
-
-<p><%= link_to "Leave Feedback for this boot", new_boot_feedback_path(@boot) %></p>
-<% if current_user.id == @boot.id || @boot.role == "mentor" %>
-  <%= render "partials/student_feedback_list" %>
-<% end %>
-
-
+  <% if current_user.id == @boot.id || @boot.role == "mentor" %>
+    <%= render "partials/student_feedback_list" %>
+  <% end %>
+  <p><%= link_to "Leave Feedback for this boot", new_boot_feedback_path(@boot) %></p>
