@@ -4,16 +4,17 @@
     </a>
     <ul id="UL_16">
       <% if current_user %>
-      <li><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'Calendar', appointments_path %></li>
-      <li><%= link_to 'Profile Page', boot_path(current_user.id) %></li>
-      <li><%= link_to 'Edit Profile', edit_boot_path(current_user.id) %></li>
-      <li><%= link_to 'Logout', session_path(session[:id]), method: :delete %></li>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Calendar', appointments_path %></li>
+        <li><%= link_to 'Profile Page', boot_path(current_user.id) %></li>
+        <li><%= link_to 'Mentors', boots_path %></li>  
+        <li><%= link_to 'Edit Profile', edit_boot_path(current_user.id) %></li>
+        <li><%= link_to 'Logout', session_path(session[:id]), method: :delete %></li>
       <% else %>
-      <li><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'Calendar', appointments_path %></li>
-      <li><%= link_to 'Sign Up', new_boot_path %></li>
-      <li><%= link_to 'Login', new_session_path %></li>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Calendar', appointments_path %></li>
+        <li><%= link_to 'Sign Up', new_boot_path %></li>
+        <li><%= link_to 'Login', new_session_path %></li>
       <% end %>
     </ul>
   </div>
