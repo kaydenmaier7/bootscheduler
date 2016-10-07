@@ -6,7 +6,6 @@
 <div class='date_div'>
   <p><%= date %></p>
 </div>
-<hr>
 
   <% @appointments.each do |appointment| %>
 <% if appointment.date == date && appointment.student_id == nil %>
