@@ -1,7 +1,7 @@
 <h1>Your Appointment</h1>
 <p>
   <strong>Time:</strong>
-  <%= @appointment.time.strftime("%H:%M") %>
+  <%= readable_time(@appointment.time) %>
 </p>
 
 <p>
@@ -26,4 +26,4 @@
 
 <%= link_to 'Edit', edit_appointment_path(@appointment) %>
 <%= link_to 'Cancel', appointment_path(@appointment), :method => :delete %>
-<%= link_to 'Back', appointment_path %>
+<%= link_to 'Home', appointments_path %>
