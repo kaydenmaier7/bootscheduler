@@ -1,0 +1,9 @@
+<ul>
+<h3>Feedback</h3>
+    <% @boot.feedbacks.each do |feedback| %>
+        <li>
+            <p>Rating: <%= feedback.rating %></p>
+            <p>Comment: <%= feedback.comment %></p>
+        </li>
+    <% end %>
+</ul>
