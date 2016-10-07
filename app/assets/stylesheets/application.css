@@ -20,6 +20,7 @@
  img#scheduler {
   height: 3em;
   vertical-align: super !important;
+  margin-top: -12px;
  }
 
 #navbar {
