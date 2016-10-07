@@ -2,36 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.center_header {
+  text-align: center;
+}
+
 .calendar {
-  overflow: auto;
+  margin: auto;
 }
 
 .simple-calendar {
 
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  color: #333E48;
+
+  .calendar-heading {
+    margin: auto;
+    text-align: center;
+  }
+
+  a, .calendar-title {
+    color: #19ABB5;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-right: 20px;
+  }
+
+  a:hover {
+    color: #7A8586;
+  }
+
+
 
   thead tr th {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     padding: 10px;
     margin: 0;
     font-size: 1.1em;
-    border: 1px solid black;
+    border: 1px solid #BDDDE1;
     border-radius: 2px;
+    background-color: #BDDDE1;
+    color: #7A8586;
+    box-shadow: 2px 2px #888888 inset;
   }
 
     thead tr th:hover {
-    color: blue;
+    color: #19ABB5;
     box-shadow: 2px 2px #888888;
   }
 
 
 
   .day {
-    padding: 10px;
-    border: 1px solid black;
+    padding: 3px;
+    border: 1px solid #BDDDE1;
     height: 450px;
-    min-width: 200px;
+    width: 150px;
     text-align: center;
     box-shadow: 2px 2px #888888 inset;
-    background-color: #c0c0c0;
+    background-color: #BDDDE1;
+
   }
 
   .wday-0 {}
@@ -56,9 +85,10 @@
 
   .appointment {
     padding: 5px;
-    background-color: white;
+    background-color: #C3C6C8;
     box-shadow: 2px 2px 2px #888888;
-    margin: 2px;
+    margin: 5px;
+    border-radius: 5px;
   }
 
   .appointment:hover {
@@ -71,7 +101,8 @@
     }
 
     input:hover {
-      color: blue;
+      color: #19ABB5;
+      text-shadow: .3px .3px #19ABB5;
     }
   }
 
