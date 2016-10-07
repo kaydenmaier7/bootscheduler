@@ -4,44 +4,51 @@
 
 <% if @boot.role == 'student' %>
 
+  <% @boot.student_appointments.each do |a| %>
+  <hr>
 
+  <div class='appointment_details'>
+    <p>Time: <%= a.time %></p>
+    <p>Date: <%= a.date %></p>
+    <p>Location: <%= a.location %></p>
+    <p>Topic: <%= a.topic.name %></p>
+    <p>With: <%= a.mentor.first_name %></p>
+  </div>
 
-<% @boot.student_appointments.each do |a| %>
-<hr>
-
-<div class='appointment_details'>
-  <p>Time: <%= a.time %></p>
-  <p>Date: <%= a.date %></p>
-  <p>Location: <%= a.location %></p>
-  <p>Topic: <%= a.topic.name %></p>
-  <p>With: <%= a.mentor.first_name %></p>
-</div>
-
-<% end %>
-
-
-
+  <% end %>
 
 <% else %>
 
+  <% @boot.mentor_appointments.each do |a| %>
+  <hr>
 
-<% @boot.mentor_appointments.each do |a| %>
-<hr>
+  <div class='appointment_details'>
+    <p>Time: <%= a.time %></p>
+    <p>Date: <%= a.date %></p>
+    <p>Location: <%= a.location %></p>
+    <p>Topic: <%= a.topic.name %></p>
+    <% if a.student %>
+      <p>With: <%= a.student.first_name %></p>
+    <% else %>
+      <p>Slots still open</p>
+    <% end %>
+  </div>
 
-<div class='appointment_details'>
-  <p>Time: <%= a.time %></p>
-  <p>Date: <%= a.date %></p>
-  <p>Location: <%= a.location %></p>
-  <p>Topic: <%= a.topic.name %></p>
-  <% if a.student %>
-    <p>With: <%= a.student.first_name %></p>
-  <% else %>
-    <p>Slots still open</p>
   <% end %>
-</div>
 
+  <div>
+    <h3>Currently Teaching:</h3>
+    <ul>
+      <% current_user.topics.each do |topic| %>
+        <li>
+          <%= topic.name %>
+        </li>
+      <% end %>
+    </ul>  
+  </div>
 <% end %>
 
 
 
-<% end %>
+
+
