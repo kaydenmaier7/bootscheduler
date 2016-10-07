@@ -9,7 +9,7 @@
 <%= week_calendar events: @appointments do |date, appointments| %>
 
 <div class='date_div'>
-  <p><%= date %></p>
+  <p><%= reformat_date(date) %></p>
 </div>
 
   <% @appointments.each do |appointment| %>
