@@ -1,10 +1,12 @@
-<ul>
-  <% current_user.feedbacks.each do |feedback| %>
-    <li>
-      <p>Rating: </p>
-      <%= feedback.rating %>
-      <p>Comment: </p>
-      <%= feedback.comment %>
-    </li>
-  <% end %>
-</ul>
+<% if current_user %>
+  <ul>
+    <% current_user.feedbacks.each do |feedback| %>
+      <li>
+        <p>Rating: </p>
+        <%= feedback.rating %>
+        <p>Comment: </p>
+        <%= feedback.comment %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
