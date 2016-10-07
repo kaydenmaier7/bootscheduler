@@ -125,6 +125,18 @@ body {
    font-size: 16px;
    font-weight: 400;
 }
+
+.apt-new label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+.apt-new-select label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
 .apt-show p{
    color: #58595B;
    font-size: 16px;

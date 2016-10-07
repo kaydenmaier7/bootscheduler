@@ -17,8 +17,10 @@
     <%= f.text_field :location %>
   </p>
 
-  <p class="btn">
-    <p>Topic:</p>
+  <div class="apt-new-select">
+
+    
+    
     <%= f.radio_button :topic, 'JavaScript' %>
     <%= f.label :topic, 'JavaScript' %>
     <br>
@@ -33,7 +35,9 @@
     <br>
     <%= f.radio_button :topic, 'Sinatra' %>
     <%= f.label :topic, 'Sinatra' %>
+  </div>
 
+  <p class="btn">
     <%= f.submit %>
   </p>
 <% end %>
