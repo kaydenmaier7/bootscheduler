@@ -3,6 +3,10 @@
 
 <%= form_for @boot do |f| %>
 
+<div class="error_message">
+<%= render 'partials/error_messages', active_object: @boot %>
+</div>
+
 <p>
 <%= f.label :first_name %><br>
 <%= f.text_field :first_name %><br>

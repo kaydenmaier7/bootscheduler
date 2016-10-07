@@ -1,3 +1,7 @@
+ <div class="error_message">
+<%= render 'partials/error_messages', active_object: @feedback %>
+</div>
+
 <%= form_for [@boot, @boot.feedbacks.build]  do |f| %>
     <%= f.radio_button :rating, 1 %>
     <%= f.label :rating, 1 %>
@@ -17,13 +21,6 @@
     <br>
     <%= f.label :comment %>:
     <%= f.text_area :comment %>
-    <br>
-    <br>
-    <p>Was the feedback Actionable, Specific, and Kind?</p>
-    <%= f.radio_button :ask?, true %>
-    <%= f.label :rating, "Yes"%>
-    <%= f.radio_button :ask?, false %>
-    <%= f.label :rating, "No"%>
     <br>
     <br>
     <%= f.submit %>
