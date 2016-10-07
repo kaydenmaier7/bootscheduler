@@ -103,6 +103,13 @@ body {
   border-radius: 2px;
 }
 
+#homePage {
+  margin-top: -400px;
+  width: 102%;
+  background-size: cover;
+  margin-left: -9px;
+  margin-right: -17px;
+}
 
 .apt-show {
   text-align: center;
