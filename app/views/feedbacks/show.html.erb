@@ -4,8 +4,8 @@
 <p>Comment: </p>
 <%= @feedback.comment %> 
 
-<p><%= link_to "Edit", edit_feedback_path(@feedback) %></p>
-<p><%= link_to "Destroy", feedback_path(@feedback),
+<p><%= link_to "Edit", edit_boot_feedback_path(@feedback) %></p>
+<p><%= link_to "Destroy", boot_feedback_path(@feedback),
                         method: :delete,
                         data: { confirm: "Are you sure?" } %> </p>
-<p><%= link_to "Back", feedbacks_path %></p> 
+<p><%= link_to "Back", boot_path %></p> 
