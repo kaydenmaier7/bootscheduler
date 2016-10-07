@@ -18,7 +18,7 @@
   <% end %>
 
 <% else %>
-<h3>Appointment To Teach A Student:</h3>
+<h3>Teaching at these times:</h3>
   <% @boot.mentor_appointments.each do |a| %>
   <hr>
 
@@ -35,7 +35,7 @@
       <p>With: <%= a.student.first_name %></p>
       <%= link_to 'Cancel Appointment'   %>
     <% else %>
-      <p>Slots still open</p>
+      <p>Appointment Is Still Available</p>
     <% end %>
   </div>
 
