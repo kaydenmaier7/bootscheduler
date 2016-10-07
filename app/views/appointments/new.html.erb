@@ -1,20 +1,23 @@
+<div class="apt">
+
 <h1>Make a New Appointment</h1>
 <%= form_for @appointment do |f| %>
-  <p>
+  <p class="apt-new">
     <%= f.label :time %><br>
     <%= f.time_field :time %>
   </p>
 
-  <p>
+  <p class="apt-new">
     <%= f.label :date %><br>
     <%= f.date_field :date %>
   </p>
 
-  <p>
+  <p class="apt-new">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
   </p>
 
+  <p class="btn">
     <p>Topic:</p>
     <%= f.radio_button :topic, 'JavaScript' %>
     <%= f.label :topic, 'JavaScript' %>
@@ -31,9 +34,7 @@
     <%= f.radio_button :topic, 'Sinatra' %>
     <%= f.label :topic, 'Sinatra' %>
 
-  <p>
     <%= f.submit %>
   </p>
 <% end %>
-
-<!-- not sure how we're going to have student set up appointment if we're going to be using a calendar  -->
+</div>
