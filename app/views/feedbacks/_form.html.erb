@@ -1,4 +1,4 @@
-<%= form_for @feedback do |f| %>
+<%= form_for [@boot, @boot.feedbacks.build]  do |f| %>
     <%= f.radio_button :rating, 1 %>
     <%= f.label :rating, 1 %>
     <br>
