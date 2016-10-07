@@ -147,6 +147,12 @@ body {
   border-radius: 2px;
 }
 
+#boots-edit label{
+   color: #7A8586;
+   font-size: 16px;
+   font-weight: 400;
+}
+
 #homePage {
   margin-top: -362px;
   width: 101vw;
