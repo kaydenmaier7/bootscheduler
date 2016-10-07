@@ -14,4 +14,84 @@
  *= require_self
  */
 
+#NAV_1 {
+    bottom: 319.609px;
+    box-sizing: border-box;
+    color: rgb(130, 140, 145);
+    height: 77.3906px;
+    left: 0px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 1357px;
+    z-index: 99;
+    column-rule-color: rgb(130, 140, 145);
+    perspective-origin: 678.5px 38.6875px;
+    transform-origin: 678.5px 38.6875px;
+    background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(130, 140, 145);
+    font: normal normal normal normal 16px / normal "Source Sans Pro", Helvetica, Arial, sans-serif;
+    outline: rgb(130, 140, 145) none 0px;
+    transition: background 0.125s linear 0s;
+}/*#NAV_1*/
+
+#NAV_1:after {
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 2px;
+    box-sizing: border-box;
+    color: rgb(130, 140, 145);
+    content: '""';
+    display: block;
+    height: 77.3906px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 1357px;
+    z-index: -1;
+    column-rule-color: rgb(130, 140, 145);
+    perspective-origin: 678.5px 38.6875px;
+    transform-origin: 678.5px 38.6875px;
+    border: 0px none rgb(130, 140, 145);
+    font: normal normal normal normal 16px / normal "Source Sans Pro", Helvetica, Arial, sans-serif;
+    outline: rgb(130, 140, 145) none 0px;
+    transition: opacity 0.125s linear 0s;
+}/*#NAV_1:after*/
+
+#DIV_2 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(130, 140, 145);
+    display: flex;
+    column-rule-color: rgb(130, 140, 145);
+    justify-content: space-between;
+    perspective-origin: 678.5px 38.6875px;
+    transform-origin: 678.5px 38.6875px;
+    border: 0px none rgb(130, 140, 145);
+    font: normal normal normal normal 16px / normal "Source Sans Pro", Helvetica, Arial, sans-serif;
+    outline: rgb(130, 140, 145) none 0px;
+    padding: 0px 108.547px;
+    transition: background 0.125s linear 0s;
+}/*#DIV_2*/
+
+
+#UL_16 {
+    box-sizing: border-box;
+    clear: both;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(130, 140, 145);
+    column-rule-color: rgb(130, 140, 145);
+    justify-content: space-around;
+    perspective-origin: 354.672px 27.6875px;
+    transform-origin: 354.672px 27.6875px;
+    border: 0px none rgb(130, 140, 145);
+    font: normal normal normal normal 16px / normal "Source Sans Pro", Helvetica, Arial, sans-serif;
+    outline: rgb(130, 140, 145) none 0px;
+}/*#UL_16*/
+
+#ul_16 li {
+  display: inline;
+}
 
