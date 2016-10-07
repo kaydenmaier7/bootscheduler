@@ -38,6 +38,7 @@ class BootsController < ApplicationController
 
   def show
     @boot = Boot.find(params[:id])
+    @topics = Topic.all
   end
 private
 

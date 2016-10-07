@@ -1,36 +1,32 @@
 <div class="apt-show">
-<h1>Your Appointment</h1>
-<p>
-  <label>Time:</label>
-  <%= readable_time(@appointment.time) %>
-</p>
+  <h1>Your Appointment</h1>
+  <p>
+    <label>Time:</label>
+    <%= readable_time(@appointment.time) %>
+  </p>
 
-<p>
-  <label>Date:</label>
-  <%= @appointment.date %>
-</p>
+  <p>
+    <label>Date:</label>
+    <%= @appointment.date %>
+  </p>
 
-<p>
-  <label>Location:</label>
-  <%= @appointment.location %>
-</p>
+  <p>
+    <label>Location:</label>
+    <%= @appointment.location %>
+  </p>
 
-<p>
-  <label>Mentor:</label>
-  <%= @appointment.mentor.first_name %>
-</p>
+  <p>
+    <label>Mentor:</label>
+    <%= @appointment.mentor.first_name %>
+  </p>
 
-<p>
-  <label>Topic:</label>
-  <%= @appointment.topic.name %>
-</p>
+  <p>
+    <label>Topic:</label>
+    <%= @appointment.topic.name %>
+  </p>
 
-<div class="show-list">
-  <%= link_to 'Edit', edit_appointment_path(@appointment) %>
-  <%= link_to 'Cancel', appointment_path(@appointment), :method => :delete %>
-  <%= link_to 'Home', appointments_path %>
-</div>
-
-
-
+  <div class="show-list">
+    <%= link_to 'Cancel', appointment_path(@appointment), :method => :delete %>
+    <%= link_to 'Home', appointments_path %>
+  </div>
 </div>
