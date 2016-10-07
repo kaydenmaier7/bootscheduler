@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ #logo {
+
+ }
+
+ #scheduler {
+  height: 37% !important;
+  vertical-align: super !important;
+ }
 
 #navbar {
   padding-top: 16px;
@@ -120,6 +128,16 @@ body {
 .boots {
   text-align: center;
 }
+.form {
+  text-align: center;
+}
+
+.feedbacks {
+  text-align: center;
+  color: #828c91;
+  font-size: 25px;
+  font-weight: 200;
+}
 
 #apt-edit {
   text-align: center;
@@ -187,6 +205,7 @@ body {
    font-size: 16px;
    font-weight: 400;
 }
+
 .apt-show p{
    color: #58595B;
    font-size: 16px;
