@@ -53,7 +53,10 @@
   </div>
 <% end %>
 
-  <% if current_user.id == @boot.id || @boot.role == "mentor" %>
-    <%= render "partials/student_feedback_list" %>
-  <% end %>
+<% if current_user.id == @boot.id || @boot.role == "mentor" %>
+  <%= render "partials/student_feedback_list" %>
+<% end %>
+
+<% if current_user.id != @boot.id %>
   <p><%= link_to "Leave Feedback for this boot", new_boot_feedback_path(@boot) %></p>
+<% end %>
