@@ -1,6 +1,15 @@
-<div class="error_message">
-<%= render 'partials/error_messages', active_object: @feedback %>
-</div>
+ <% if @feedback.errors.any? %>
+  <div id="error_explanation">
+   <div class="alert alert-error">
+    The form contains <%= pluralize(@feedback.errors.count, "error") %>.
+   </div>
+   <ul>
+    <% @feedback.errors.full_messages.each do |msg| %>
+     <li>* <%= msg %></li>
+    <% end %>
+   </ul>
+  </div>
+ <% end %>
 
 <%= form_for :feedback, url: boot_feedback_path(@feedback), method: :patch do |f| %>
 

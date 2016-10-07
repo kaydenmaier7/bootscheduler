@@ -2,6 +2,7 @@ class FeedbacksController < ApplicationController
 
   def index
     @feedbacks = Feedback.all
+    # redirect_to boot_path(current_user)
   end
 
   def new
