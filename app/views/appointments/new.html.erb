@@ -15,6 +15,22 @@
     <%= f.text_field :location %>
   </p>
 
+    <p>Topic:</p>
+    <%= f.radio_button :topic, 'JavaScript' %>
+    <%= f.label :topic, 'JavaScript' %>
+    <br>
+    <%= f.radio_button :topic, 'Rails' %>
+    <%= f.label :topic, 'Rails' %>
+    <br>
+    <%= f.radio_button :topic, 'ActiveRecord' %>
+    <%= f.label :topic, 'ActiveRecord' %>
+    <br>
+    <%= f.radio_button :topic, 'Ruby' %>
+    <%= f.label :topic, 'Ruby' %>
+    <br>
+    <%= f.radio_button :topic, 'Sinatra' %>
+    <%= f.label :topic, 'Sinatra' %>
+
   <p>
     <%= f.submit %>
   </p>
