@@ -26,7 +26,8 @@
       <p>Date: <%= a.date %></p>
       <p>Location: <%= a.location %></p>
       <% if !a.mentor.topics.include?(a.topic)  %>
-      <% a.mentor.topics << Topic.find(a.topic_id) %> 
+      <% a.mentor.topics << Topic.find(a.topic_id) %>
+
     <% end %>
     <p>Topic: <%= a.topic.name %></p>
                
@@ -36,16 +37,13 @@
     <% else %>
       <p>Appointment Is Still Available</p>
     <% end %>
-  </div>
 
   <% end %>
 
     <h3>Currently Teaching:</h3>
     <ul>
       <% @boot.topics.each do |topic| %>
-        <li>
-          <%= topic.name %>
-        </li>
+          <%= topic.name %><br>
       <% end %>
     </ul>  
 <% end %>
