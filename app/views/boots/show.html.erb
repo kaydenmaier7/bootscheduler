@@ -1,60 +1,60 @@
 <div class="form">
-<h1> <%= @boot.first_name %></h1>
+  <h1> <%= @boot.first_name %></h1>
+  <div class="feedbacks">
+    <% if @boot.role == 'student' %>
+    <h3>Appointment With A Mentor:</h3>
 
-<div class="feedbacks">
-  <% if @boot.role == 'student' %>
-  <h3>Appointment With A Mentor:</h3>
+      <% @boot.student_appointments.each do |a| %>
+      <hr>
 
-    <% @boot.student_appointments.each do |a| %>
-    <hr>
-
-    <div class='appointment_details'>
-      <p>Time: <%= readable_time(a.time) %></p>
-      <p>Date: <%= a.date %></p>
-      <p>Location: <%= a.location %></p>
-      <p>Topic: <%= a.topic.name %></p>
-      <p>With: <%= a.mentor.first_name %></p>
-    </div>
-
-    <% end %>
-
-  <% else %>
-  <h3>Teaching at these times:</h3>
-    <% @boot.mentor_appointments.each do |a| %>
-    <hr>
-      <p>Time: <%= readable_time(a.time) %></p>
-      <p>Date: <%= a.date %></p>
-      <p>Location: <%= a.location %></p>
-      <% if !a.mentor.topics.include?(a.topic)  %>
-      <% a.mentor.topics << Topic.find(a.topic_id) %>
-
-    <% end %>
-    <p>Topic: <%= a.topic.name %></p>
-               
-    <% if a.student %>
-      <p>With: <%= a.student.first_name %></p>
-      <%= link_to 'Cancel Appointment'   %>
-    <% else %>
-      <p>Appointment Is Still Available</p>
-    <% end %>
-
-  <% end %>
-
-    <h3>Currently Teaching:</h3>
-    <ul>
-      <% @boot.topics.each do |topic| %>
-          <%= topic.name %><br>
+      <div class='appointment_details'>
+        <p>Time: <%= readable_time(a.time) %></p>
+        <p>Date: <%= reformat_date(a.date) %></p>
+        <p>Location: <%= a.location %></p>
+        <p>Topic: <%= a.topic.name %></p>
+        <p>With: <%= a.mentor.first_name %></p>
+      </div>
+      <hr>
       <% end %>
-    </ul>  
-<% end %>
-</div>
 
-  <% if current_user.id == @boot.id || @boot.role == "mentor" %>
-    <%= render "partials/student_feedback_list" %>
-  <% end %>
-  <% if current_user.id != @boot.id %>
-    <div class="show-list">
-    <p class="btn"><%= link_to "Leave Feedback for this boot", new_boot_feedback_path(@boot) %></p>
+    <% else %>
+    <h3>Teaching at these times:</h3>
+      <% @boot.mentor_appointments.each do |a| %>
+      <hr>
+        <p>Time: <%= readable_time(a.time) %></p>
+        <p>Date: <%= reformat_date(a.date) %></p>
+        <p>Location: <%= a.location %></p>
+        <% if !a.mentor.topics.include?(a.topic)  %>
+        <% a.mentor.topics << Topic.find(a.topic_id) %>
+        <% end %>
+        <p>Topic: <%= a.topic.name %></p>
+
+      <% if a.student %>
+        <p>With: <%= a.student.first_name %></p>
+        <%= link_to 'Cancel Appointment'   %>
+      <% else %>
+        <p><%= link_to 'Appointment Is Still Available' %></p>
+      <% end %>
+      <% end %>
+    <div>
+    <hr>
+      <h3>Currently Teaching:</h3>
+      <ul>
+        <% @boot.topics.each do |topic| %>
+          <%= topic.name %><br>
+        <% end %>
+      </ul>
+        <% end %>
+    <hr>
     </div>
-  <% end %>
+  </div>
+
+    <% if current_user.id == @boot.id || @boot.role == "mentor" %>
+      <%= render "partials/student_feedback_list" %>
+    <% end %>
+    <% if current_user.id != @boot.id %>
+      <div class="show-list">
+      <p class="btn"><%= link_to "Leave Feedback for this boot", new_boot_feedback_path(@boot) %></p>
+      </div>
+    <% end %>
 </div>
